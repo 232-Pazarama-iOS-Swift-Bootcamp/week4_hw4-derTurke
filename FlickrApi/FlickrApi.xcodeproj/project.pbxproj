@@ -10,6 +10,15 @@
 		3F33306928FDC0BD0086E62B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F33306828FDC0BD0086E62B /* AppDelegate.swift */; };
 		3F33307228FDC0BE0086E62B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F33307128FDC0BE0086E62B /* Assets.xcassets */; };
 		3F33307528FDC0BE0086E62B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F33307328FDC0BE0086E62B /* LaunchScreen.storyboard */; };
+		3F81E9E828FDC92100D15D42 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 3F81E9E728FDC92100D15D42 /* Moya */; };
+		3F81E9EC28FDCAE600D15D42 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F81E9EB28FDCAE600D15D42 /* GoogleService-Info.plist */; };
+		3F81E9EF28FDCBD200D15D42 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3F81E9EE28FDCBD200D15D42 /* FirebaseAuth */; };
+		3F81E9F128FDCBD200D15D42 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 3F81E9F028FDCBD200D15D42 /* FirebaseFirestore */; };
+		3F81E9F328FDCBD200D15D42 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 3F81E9F228FDCBD200D15D42 /* FirebaseRemoteConfig */; };
+		3F81E9F628FDCDE400D15D42 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3F81E9F528FDCDE400D15D42 /* SnapKit */; };
+		3F81E9F928FDCE0C00D15D42 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 3F81E9F828FDCE0C00D15D42 /* Kingfisher */; };
+		3FE2184E28FDDF010082D04A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE2184C28FDDF010082D04A /* WelcomeViewController.swift */; };
+		3FE2184F28FDDF010082D04A /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FE2184D28FDDF010082D04A /* WelcomeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +27,9 @@
 		3F33307128FDC0BE0086E62B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F33307428FDC0BE0086E62B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F33307628FDC0BE0086E62B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F81E9EB28FDCAE600D15D42 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3FE2184C28FDDF010082D04A /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		3FE2184D28FDDF010082D04A /* WelcomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = WelcomeViewController.xib; path = ../Controller/WelcomeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -25,6 +37,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F81E9F928FDCE0C00D15D42 /* Kingfisher in Frameworks */,
+				3F81E9E828FDC92100D15D42 /* Moya in Frameworks */,
+				3F81E9EF28FDCBD200D15D42 /* FirebaseAuth in Frameworks */,
+				3F81E9F128FDCBD200D15D42 /* FirebaseFirestore in Frameworks */,
+				3F81E9F328FDCBD200D15D42 /* FirebaseRemoteConfig in Frameworks */,
+				3F81E9F628FDCDE400D15D42 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,7 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				3F33307C28FDC1510086E62B /* App */,
-				3F33307D28FDC1560086E62B /* Scenes */,
+				3F81E9FA28FDCF0200D15D42 /* Scenes */,
 			);
 			path = FlickrApi;
 			sourceTree = "<group>";
@@ -65,13 +83,6 @@
 				3F33307E28FDC15E0086E62B /* Delegates */,
 			);
 			path = App;
-			sourceTree = "<group>";
-		};
-		3F33307D28FDC1560086E62B /* Scenes */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Scenes;
 			sourceTree = "<group>";
 		};
 		3F33307E28FDC15E0086E62B /* Delegates */ = {
@@ -93,6 +104,7 @@
 		3F33308028FDC1700086E62B /* Plists */ = {
 			isa = PBXGroup;
 			children = (
+				3F81E9EB28FDCAE600D15D42 /* GoogleService-Info.plist */,
 				3F33307628FDC0BE0086E62B /* Info.plist */,
 			);
 			path = Plists;
@@ -104,6 +116,39 @@
 				3F33307328FDC0BE0086E62B /* LaunchScreen.storyboard */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		3F81E9FA28FDCF0200D15D42 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				3F81EA0B28FDDC9100D15D42 /* Welcome */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		3F81EA0B28FDDC9100D15D42 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				3F81EA0D28FDDCB400D15D42 /* View */,
+				3F81EA0C28FDDC9C00D15D42 /* Controller */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		3F81EA0C28FDDC9C00D15D42 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3FE2184C28FDDF010082D04A /* WelcomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3F81EA0D28FDDCB400D15D42 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3FE2184D28FDDF010082D04A /* WelcomeViewController.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,6 +167,14 @@
 			dependencies = (
 			);
 			name = FlickrApi;
+			packageProductDependencies = (
+				3F81E9E728FDC92100D15D42 /* Moya */,
+				3F81E9EE28FDCBD200D15D42 /* FirebaseAuth */,
+				3F81E9F028FDCBD200D15D42 /* FirebaseFirestore */,
+				3F81E9F228FDCBD200D15D42 /* FirebaseRemoteConfig */,
+				3F81E9F528FDCDE400D15D42 /* SnapKit */,
+				3F81E9F828FDCE0C00D15D42 /* Kingfisher */,
+			);
 			productName = FlickrApi;
 			productReference = 3F33306528FDC0BD0086E62B /* FlickrApi.app */;
 			productType = "com.apple.product-type.application";
@@ -150,6 +203,12 @@
 				Base,
 			);
 			mainGroup = 3F33305C28FDC0BD0086E62B;
+			packageReferences = (
+				3F81E9E628FDC92100D15D42 /* XCRemoteSwiftPackageReference "Moya" */,
+				3F81E9ED28FDCBD200D15D42 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				3F81E9F428FDCDE400D15D42 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				3F81E9F728FDCE0C00D15D42 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 3F33306628FDC0BD0086E62B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -165,7 +224,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F33307528FDC0BE0086E62B /* LaunchScreen.storyboard in Resources */,
+				3FE2184F28FDDF010082D04A /* WelcomeViewController.xib in Resources */,
 				3F33307228FDC0BE0086E62B /* Assets.xcassets in Resources */,
+				3F81E9EC28FDCAE600D15D42 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FE2184E28FDDF010082D04A /* WelcomeViewController.swift in Sources */,
 				3F33306928FDC0BD0086E62B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,6 +380,7 @@
 				DEVELOPMENT_TEAM = 57W84AD39K;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlickrApi/App/Plists/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -349,6 +412,7 @@
 				DEVELOPMENT_TEAM = 57W84AD39K;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlickrApi/App/Plists/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -392,6 +456,74 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3F81E9E628FDC92100D15D42 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		3F81E9ED28FDCBD200D15D42 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		3F81E9F428FDCDE400D15D42 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		3F81E9F728FDCE0C00D15D42 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3F81E9E728FDC92100D15D42 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3F81E9E628FDC92100D15D42 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		3F81E9EE28FDCBD200D15D42 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3F81E9ED28FDCBD200D15D42 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		3F81E9F028FDCBD200D15D42 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3F81E9ED28FDCBD200D15D42 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		3F81E9F228FDCBD200D15D42 /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3F81E9ED28FDCBD200D15D42 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
+		};
+		3F81E9F528FDCDE400D15D42 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3F81E9F428FDCDE400D15D42 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		3F81E9F828FDCE0C00D15D42 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3F81E9F728FDCE0C00D15D42 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3F33305D28FDC0BD0086E62B /* Project object */;
 }
