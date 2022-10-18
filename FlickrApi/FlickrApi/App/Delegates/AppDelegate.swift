@@ -31,7 +31,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // First page setup
     private func setupWindow() {
         let window = UIWindow(frame: UIScreen.main.bounds)
-        let viewController = WelcomeViewController()
+        let viewModel = WelcomeViewModel()
+        let viewController = WelcomeViewController(viewModel: viewModel)
         window.rootViewController = UINavigationController(rootViewController: viewController)
         window.makeKeyAndVisible()
         self.window = window
