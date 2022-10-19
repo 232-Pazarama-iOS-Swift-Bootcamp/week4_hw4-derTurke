@@ -70,12 +70,14 @@ final class AuthViewController: UIViewController, AlertPresentable {
         }
         switch authType {
             case .signIn:
-                viewModel.signIn(credential: credential, password: password) {
-                    
+                viewModel.signIn(credential: credential, password: password) { [weak self] in
+                    guard let self = self else { return }
+                    self.navigationController?.pushViewController(MainTabBarController(), animated: true)
                 }
             case .signUp:
-                viewModel.signUp(credential: credential, password: password) {
-                    
+                viewModel.signUp(credential: credential, password: password) { [weak self] in
+                    guard let self = self else { return }
+                    self.navigationController?.pushViewController(MainTabBarController(), animated: true)
                 }
             case .none:
                 break;

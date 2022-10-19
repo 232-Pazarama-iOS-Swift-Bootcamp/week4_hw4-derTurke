@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -26,7 +27,7 @@
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S7h-25-kpF">
                             <rect key="frame" x="0.0" y="0.0" width="335" height="50"/>
-                            <color key="backgroundColor" systemColor="systemPinkColor"/>
+                            <color key="backgroundColor" name="Primary"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="gKZ-OM-WmR"/>
                             </constraints>
@@ -47,7 +48,7 @@
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="Sign Up">
                                 <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="20"/>
-                                <color key="baseForegroundColor" systemColor="systemPinkColor"/>
+                                <color key="baseForegroundColor" name="Primary"/>
                             </buttonConfiguration>
                             <connections>
                                 <action selector="didTapAuthButton:" destination="-1" eventType="touchUpInside" id="Pgi-lq-TaL"/>
@@ -61,12 +62,12 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wjn-2C-Mrc">
                     <rect key="frame" x="187.66666666666666" y="578" width="0.0" height="0.0"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="je2-zS-vrw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="0Yp-q7-zcR"/>
                 <constraint firstItem="4fk-n5-qUj" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="5ir-Qj-z9j"/>
@@ -82,8 +83,11 @@
         </view>
     </objects>
     <resources>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="Primary">
+            <color red="0.25882352941176473" green="0.37254901960784315" blue="0.3411764705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
