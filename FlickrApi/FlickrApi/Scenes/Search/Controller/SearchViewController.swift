@@ -76,7 +76,7 @@ extension SearchViewController: UICollectionViewDataSource {
             fatalError("SearchCollectionViewCell not found.")
         }
         guard let searchItem = viewModel.searchForIndexPath(indexPath), let url = searchItem.urlC else {
-            fatalError("SearchItem not found.")
+            return cell
         }
         guard let photoURL = URL(string: url) else {
             return cell
