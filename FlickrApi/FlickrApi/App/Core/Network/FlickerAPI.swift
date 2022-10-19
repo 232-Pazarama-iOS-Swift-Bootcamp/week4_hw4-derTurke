@@ -12,6 +12,7 @@ let flickerAPI = MoyaProvider<FlickerAPI>()
 
 enum FlickerAPI {
     case getRecentPhotos
+    case getSearchPhotos(_ text: String)
 }
 
 extension FlickerAPI: TargetType {
@@ -32,11 +33,23 @@ extension FlickerAPI: TargetType {
     }
     
     var task: Moya.Task {
-        let parameters: [String: Any] = ["method": "flickr.photos.getRecent",
-                                         "api_key": "9d2f8465a46267b299c87c386312bdda",
-                                         "format": "json",
-                                         "nojsoncallback": "1",
-                                         "extras" : "owner_name,url_c"]
+        var parameters: [String: Any] = [:]
+        switch self {
+            case .getRecentPhotos:
+                parameters = ["method": "flickr.photos.getRecent",
+                              "api_key": "9d2f8465a46267b299c87c386312bdda",
+                              "format": "json",
+                              "nojsoncallback": "1",
+                              "extras" : "owner_name,url_c"]
+            case .getSearchPhotos(let text):
+                parameters = ["method": "flickr.photos.search",
+                              "api_key": "9d2f8465a46267b299c87c386312bdda",
+                              "format": "json",
+                              "nojsoncallback": "1",
+                              "extras" : "owner_name,url_c",
+                              "text": text]
+        }
+        
         return .requestParameters(parameters: parameters, encoding: URLEncoding.queryString)
     }
     

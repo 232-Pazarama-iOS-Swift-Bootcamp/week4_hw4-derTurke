@@ -32,7 +32,7 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SaE-B9-zYw">
-                    <rect key="frame" x="93" y="84.333333333333329" width="75.666666666666686" height="20.333333333333329"/>
+                    <rect key="frame" x="93" y="84.333333333333329" width="235" height="20.333333333333329"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -58,6 +58,17 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pencil" translatesAutoresizingMaskIntoConstraints="NO" id="F1R-cg-OPc">
+                    <rect key="frame" x="333" y="78.666666666666671" width="32" height="32"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="32" id="NYB-Xq-gEC"/>
+                        <constraint firstAttribute="height" constant="32" id="ysS-gK-F0s"/>
+                    </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="Puy-c4-xva" appends="YES" id="xgh-ku-Jc7"/>
+                    </connections>
+                </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -70,16 +81,25 @@
                 <constraint firstItem="I4o-jp-Qsz" firstAttribute="top" secondItem="AeV-VO-oQE" secondAttribute="bottom" constant="8" symbolic="YES" id="eEp-YN-IEY"/>
                 <constraint firstItem="4kJ-dD-evm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="hYv-Im-ar2"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="4kJ-dD-evm" secondAttribute="bottom" id="jmh-hf-Icr"/>
+                <constraint firstAttribute="trailing" secondItem="F1R-cg-OPc" secondAttribute="trailing" constant="10" id="kz1-xy-22M"/>
                 <constraint firstItem="AeV-VO-oQE" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="w0g-2c-F6f"/>
+                <constraint firstItem="F1R-cg-OPc" firstAttribute="centerY" secondItem="SaE-B9-zYw" secondAttribute="centerY" id="w3w-q1-gw0"/>
                 <constraint firstItem="AeV-VO-oQE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="xVQ-FF-gYu"/>
+                <constraint firstItem="F1R-cg-OPc" firstAttribute="leading" secondItem="SaE-B9-zYw" secondAttribute="trailing" constant="5" id="yei-m3-SXg"/>
                 <constraint firstItem="SaE-B9-zYw" firstAttribute="centerY" secondItem="AeV-VO-oQE" secondAttribute="centerY" id="yuB-b7-P0H"/>
             </constraints>
             <point key="canvasLocation" x="130.76923076923077" y="-11.374407582938389"/>
         </view>
+        <tapGestureRecognizer id="Puy-c4-xva">
+            <connections>
+                <action selector="didTapPencil:" destination="-1" id="J5L-1X-A2o"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
     <resources>
         <image name="bookmark2.fill" width="32" height="32"/>
         <image name="like.fill" width="32" height="32"/>
+        <image name="pencil" width="32" height="32"/>
         <image name="user" width="256" height="256"/>
         <namedColor name="Primary">
             <color red="0.25882352941176473" green="0.37254901960784315" blue="0.3411764705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -69,7 +69,6 @@ final class ProfileViewModel {
                 return
             }
             self.fetchFavoritesOrCollections(collection: collection)
-            
         }
     }
 }

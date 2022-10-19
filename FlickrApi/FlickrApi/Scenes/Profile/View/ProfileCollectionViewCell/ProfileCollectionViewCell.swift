@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProfileCollectionViewCell: UICollectionViewCell {
+final class ProfileCollectionViewCell: UICollectionViewCell {
     
     weak var delegate: ProfileCellDelegate?
     var photo: Photo?
@@ -20,7 +20,7 @@ class ProfileCollectionViewCell: UICollectionViewCell {
     }()
     private lazy var likedButton: UIButton = {
         let button = UIButton()
-        button.setImage(UIImage(named: "like.fill"), for: .normal)
+        button.setImage(UIImage(named: "trash"), for: .normal)
         button.backgroundColor = .lightGray
         button.layer.cornerRadius = 8
         button.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3).cgColor

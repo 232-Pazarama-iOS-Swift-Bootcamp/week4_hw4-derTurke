@@ -41,6 +41,11 @@ final class ProfileViewController: UIViewController, AlertPresentable {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(ProfileCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        
+        profileImageView.layer.cornerRadius = profileImageView.frame.width / 2
+        profileImageView.layer.borderColor = UIColor(red: 66/255, green: 95/255, blue: 87/255, alpha: 1).cgColor
+        profileImageView.layer.borderWidth = 1.0
+        profileImageView.clipsToBounds = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -61,6 +66,9 @@ final class ProfileViewController: UIViewController, AlertPresentable {
         }
     }
     
+    @IBAction func didTapPencil(_ sender: UITapGestureRecognizer) {
+        
+    }
     @IBAction func didChangedSegmentedControl(_ sender: UISegmentedControl) {
         segmentedController()
     }
