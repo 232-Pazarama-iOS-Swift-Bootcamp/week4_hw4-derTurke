@@ -23,9 +23,21 @@ Third party libraries used in the project: <br/>
 -SnapKit <br/>
 -IQKeyboardManager <br/>
 
-https://user-images.githubusercontent.com/76452852/196795431-dae913ef-b74f-4682-acac-5c53cbfde829.mp4 <br/>
-https://user-images.githubusercontent.com/76452852/196795754-6eaa94b6-477d-4f8f-a20b-35fe13876721.mp4 <br/>
-https://user-images.githubusercontent.com/76452852/196795931-7bb0e772-4227-4f38-92a4-3df6a2855a9d.mp4 <br/>
-https://user-images.githubusercontent.com/76452852/196796084-10e5e219-8986-4e62-976a-5e805a12c734.mp4 <br/>
-https://user-images.githubusercontent.com/76452852/196796422-1f757ba7-18aa-4ecc-9235-c37a118d37b3.mp4 <br/>
-https://user-images.githubusercontent.com/76452852/196797890-eaae3246-3b17-48a8-b05c-a4592b84abb3.mp4 <br/>
+
+
+https://user-images.githubusercontent.com/76452852/196798504-7716b83a-c190-44f9-adb2-d99be16086e6.mp4
+
+https://user-images.githubusercontent.com/76452852/196798566-9a74315e-5a6b-4296-9e24-d8584add6465.mp4
+
+
+https://user-images.githubusercontent.com/76452852/196799047-fe075cfd-10dd-44e7-b5a1-37f85b9b155e.mp4
+
+
+
+https://user-images.githubusercontent.com/76452852/196799060-8b085ffd-53c3-4594-8597-c764fe7f1981.mp4
+
+
+
+
+https://user-images.githubusercontent.com/76452852/196799077-f4b1f79c-c336-4e84-9bda-c60159af9852.mp4
+
