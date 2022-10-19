@@ -15,7 +15,7 @@ final class WelcomeViewController: UIViewController, AlertPresentable {
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var welcomeLabel: UILabel!
-    
+    @IBOutlet weak var signUpButton: UIButton!
     
     //MARK: - Init
     init(viewModel: WelcomeViewModel) {
@@ -39,6 +39,7 @@ final class WelcomeViewController: UIViewController, AlertPresentable {
         viewModel.fetchRemoteConfig { dictionary in
             self.imageView.kf.setImage(with: URL(string: dictionary?["welcomeImage"] as! String))
             self.welcomeLabel.text = dictionary?["welcomeLabel"] as? String
+            self.signUpButton.isHidden = (dictionary?["signUpBool"] as? Bool)!
         }
     }
     

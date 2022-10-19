@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 protocol ProfileCellDelegate: AnyObject {
     func didTapFavoriteButton(_ photo: Photo?)
@@ -35,25 +36,30 @@ final class ProfileViewController: UIViewController, AlertPresentable {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Profile"
-        tabBarController?.navigationItem.hidesBackButton = true
         viewModel.delegate = self
-        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Sign Out", style: .plain, target: self, action: #selector(didTapSignOut))
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(ProfileCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
-        
-        profileImageView.layer.cornerRadius = profileImageView.frame.width / 2
-        profileImageView.layer.borderColor = UIColor(red: 66/255, green: 95/255, blue: 87/255, alpha: 1).cgColor
-        profileImageView.layer.borderWidth = 1.0
-        profileImageView.clipsToBounds = true
+        profileImageViewConfigure()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         segmentedController()
+        viewModel.fetchProfilePicture()
+        usernameLabel.text = viewModel.fetchUsername()
     }
 
     // MARK: - Methods
+    private func profileImageViewConfigure() {
+        profileImageView.layer.cornerRadius = profileImageView.frame.width / 2
+        profileImageView.layer.borderColor = UIColor(red: 66/255, green: 95/255, blue: 87/255, alpha: 1).cgColor
+        profileImageView.layer.borderWidth = 1.0
+        profileImageView.clipsToBounds = true
+
+    }
+    
     private func segmentedController() {
         let segment = segmentedControl.selectedSegmentIndex
         switch segment {
@@ -67,10 +73,24 @@ final class ProfileViewController: UIViewController, AlertPresentable {
     }
     
     @IBAction func didTapPencil(_ sender: UITapGestureRecognizer) {
-        
+        navigationController?.pushViewController(ProfileSettingsViewController(viewModel: ProfileSettingsViewModel()), animated: true)
     }
+    
     @IBAction func didChangedSegmentedControl(_ sender: UISegmentedControl) {
         segmentedController()
+    }
+    
+    @objc private func didTapSignOut() {
+        showAlert(title: "Warning",
+                          message: "Are you sure to sign out?",
+                          cancelButtonTitle: "Cancel") { _ in
+            do {
+                try Auth.auth().signOut()
+                self.dismiss(animated: true)
+            } catch {
+                self.showError(error)
+            }
+        }
     }
 }
 
@@ -122,6 +142,10 @@ extension ProfileViewController: UICollectionViewDelegateFlowLayout {
 
 //MARK: - Profile Delegate
 extension ProfileViewController: ProfileDelegate {
+    func didFetchAvatarImage(_ image: URL) {
+        self.profileImageView.kf.setImage(with: image)
+    }
+    
     func didErrorOccurred(_ error: Error) {
         self.showError(error)
     }

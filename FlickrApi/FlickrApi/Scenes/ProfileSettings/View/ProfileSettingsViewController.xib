@@ -22,13 +22,6 @@
             <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h1V-Nk-ko2">
-                    <rect key="frame" x="131" y="97" width="128" height="128"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="128" id="Kkw-wL-Oi8"/>
-                        <constraint firstAttribute="width" constant="128" id="Lgn-EO-DhD"/>
-                    </constraints>
-                </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Vif-xj-dMT">
                     <rect key="frame" x="20" y="255" width="350" height="130"/>
                     <subviews>
@@ -56,6 +49,17 @@
                         </button>
                     </subviews>
                 </stackView>
+                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h1V-Nk-ko2">
+                    <rect key="frame" x="131" y="97" width="128" height="128"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="128" id="Kkw-wL-Oi8"/>
+                        <constraint firstAttribute="width" constant="128" id="Lgn-EO-DhD"/>
+                    </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="Tq9-c9-Mo7" appends="YES" id="Sm0-vb-kAd"/>
+                    </connections>
+                </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -68,6 +72,11 @@
             </constraints>
             <point key="canvasLocation" x="130.76923076923077" y="-11.374407582938389"/>
         </view>
+        <tapGestureRecognizer id="Tq9-c9-Mo7">
+            <connections>
+                <action selector="didTapImageView:" destination="-1" id="tpf-dv-VFH"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
     <resources>
         <namedColor name="Primary">

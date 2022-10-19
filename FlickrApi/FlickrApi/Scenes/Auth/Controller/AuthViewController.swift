@@ -72,12 +72,16 @@ final class AuthViewController: UIViewController, AlertPresentable {
             case .signIn:
                 viewModel.signIn(credential: credential, password: password) { [weak self] in
                     guard let self = self else { return }
-                    self.navigationController?.pushViewController(MainTabBarController(), animated: true)
+                    let vc = MainTabBarController()
+                    vc.modalPresentationStyle = .fullScreen
+                    self.present(vc, animated: true)
                 }
             case .signUp:
                 viewModel.signUp(credential: credential, password: password) { [weak self] in
                     guard let self = self else { return }
-                    self.navigationController?.pushViewController(MainTabBarController(), animated: true)
+                    let vc = MainTabBarController()
+                    vc.modalPresentationStyle = .fullScreen
+                    self.present(vc, animated: true)
                 }
             case .none:
                 break;

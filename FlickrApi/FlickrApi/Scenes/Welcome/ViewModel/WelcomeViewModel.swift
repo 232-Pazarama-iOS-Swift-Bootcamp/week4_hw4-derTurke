@@ -47,6 +47,7 @@ final class WelcomeViewModel {
                     var remoteArray = [String: Any]()
                     remoteArray["welcomeImage"] = imageUrl
                     remoteArray["welcomeLabel"] = label
+                    remoteArray["signUpBool"] = remoteConfig["SignUpBool"].boolValue
                     
                     DispatchQueue.main.async {
                         completion(remoteArray)

@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WelcomeViewController" customModule="FlickrApi" customModuleProvider="target">
             <connections>
                 <outlet property="imageView" destination="4fk-n5-qUj" id="cG7-43-3Cx"/>
+                <outlet property="signUpButton" destination="9jY-AO-aMM" id="1I9-lH-i5s"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="welcomeLabel" destination="Wjn-2C-Mrc" id="GqH-xN-lbe"/>
             </connections>

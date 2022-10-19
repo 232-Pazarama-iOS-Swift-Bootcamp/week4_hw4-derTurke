@@ -7,16 +7,21 @@
 
 import Foundation
 import FirebaseFirestore
+import FirebaseStorage
+import FirebaseAuth
 
 protocol ProfileDelegate: AnyObject {
     func didErrorOccurred(_ error: Error)
     func didFetchFavorites()
+    func didFetchAvatarImage(_ image: URL)
 }
 
 final class ProfileViewModel {
     weak var delegate: ProfileDelegate?
     
     private let db = Firestore.firestore()
+    
+    private let ref = Storage.storage().reference()
     
     private let defaults = UserDefaults.standard
     
@@ -56,6 +61,28 @@ final class ProfileViewModel {
         photos[indexPath.row]
     }
     
+    func fetchProfilePicture() {
+        guard let uid = defaults.string(forKey: "uid") else {
+            fatalError("Uid not found")
+        }
+        
+        ref.child("images/\(uid).png").downloadURL { url, error in
+            if let error {
+                self.delegate?.didErrorOccurred(error)
+                return
+            }
+            guard let url = url else {
+                return
+            }
+            self.delegate?.didFetchAvatarImage(url.absoluteURL)
+        }
+        
+    }
+    
+    func fetchUsername() -> String{
+        Auth.auth().currentUser?.displayName ?? ""
+    }
+    
     func deleteFavoriteOrCollection(_ photo: Photo?, collection: String?) {
         guard let photo = photo,
               let photoId = photo.id,
@@ -71,4 +98,6 @@ final class ProfileViewModel {
             self.fetchFavoritesOrCollections(collection: collection)
         }
     }
+    
+    
 }
