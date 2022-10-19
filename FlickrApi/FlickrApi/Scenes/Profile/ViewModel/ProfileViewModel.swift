@@ -65,8 +65,8 @@ final class ProfileViewModel {
         guard let uid = defaults.string(forKey: "uid") else {
             fatalError("Uid not found")
         }
-        
-        ref.child("images/\(uid).png").downloadURL { url, error in
+       
+        self.ref.child("images/\(uid).png").downloadURL { url, error in
             if let error {
                 self.delegate?.didErrorOccurred(error)
                 return
@@ -74,7 +74,9 @@ final class ProfileViewModel {
             guard let url = url else {
                 return
             }
-            self.delegate?.didFetchAvatarImage(url.absoluteURL)
+            DispatchQueue.main.async {
+                self.delegate?.didFetchAvatarImage(url.absoluteURL)
+            }
         }
         
     }

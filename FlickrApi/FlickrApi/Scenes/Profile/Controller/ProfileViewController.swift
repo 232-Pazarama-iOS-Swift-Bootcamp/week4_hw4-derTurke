@@ -47,8 +47,10 @@ final class ProfileViewController: UIViewController, AlertPresentable {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         segmentedController()
-        viewModel.fetchProfilePicture()
-        usernameLabel.text = viewModel.fetchUsername()
+        DispatchQueue.main.async {
+            self.viewModel.fetchProfilePicture()
+            self.usernameLabel.text = self.viewModel.fetchUsername()
+        }
     }
 
     // MARK: - Methods
@@ -143,7 +145,9 @@ extension ProfileViewController: UICollectionViewDelegateFlowLayout {
 //MARK: - Profile Delegate
 extension ProfileViewController: ProfileDelegate {
     func didFetchAvatarImage(_ image: URL) {
-        self.profileImageView.kf.setImage(with: image)
+        DispatchQueue.main.async {
+            self.profileImageView.kf.setImage(with: image)
+        }
     }
     
     func didErrorOccurred(_ error: Error) {

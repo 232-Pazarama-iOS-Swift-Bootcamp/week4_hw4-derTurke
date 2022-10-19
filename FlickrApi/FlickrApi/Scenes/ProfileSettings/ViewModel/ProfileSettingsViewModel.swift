@@ -32,15 +32,7 @@ final class ProfileSettingsViewModel {
                 self.delegate?.didErrorOccurred(error)
                 return
             }
-            self.ref.child("images/\(uid).png").downloadURL { url, error in
-                if let error {
-                    self.delegate?.didErrorOccurred(error)
-                }
-                guard let url = url else {
-                    return
-                }
-                self.delegate?.didFetchImage(url.absoluteURL)
-            }
+            self.fetchImage()
         }
     }
     

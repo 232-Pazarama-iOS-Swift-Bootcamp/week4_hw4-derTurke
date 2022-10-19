@@ -14,7 +14,7 @@ protocol SearchDelegate: AnyObject {
 final class SearchViewModel {
     weak var delegate: SearchDelegate?
     
-    private var searchResponse: RecentResponse? {
+    private var searchResponse: SearchResponseModel? {
         didSet {
             delegate?.didFetchSearch()
         }
@@ -25,13 +25,13 @@ final class SearchViewModel {
     }
     
     func fetchPhotos(){
-        flickerAPI.request(.getRecentPhotos) { result in
+        flickerAPI.request(.getSearch) { result in
             switch result {
                 case .failure(let error):
                     self.delegate?.didErrorOccurred(error)
                 case .success(let response):
                 do {
-                    let recentResponse = try JSONDecoder().decode(RecentResponse.self, from: response.data)
+                    let recentResponse = try JSONDecoder().decode(SearchResponseModel.self, from: response.data)
                     
                     self.searchResponse = recentResponse
                 } catch {
@@ -41,7 +41,7 @@ final class SearchViewModel {
         }
     }
     
-    func searchForIndexPath(_ indexPath: IndexPath) -> Photo? {
+    func searchForIndexPath(_ indexPath: IndexPath) -> PhotoModel? {
         searchResponse?.photos?.photo?[indexPath.row]
     }
 }

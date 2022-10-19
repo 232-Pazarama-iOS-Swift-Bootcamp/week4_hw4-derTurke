@@ -34,6 +34,8 @@
 		3F94ECD6290061F700B32F4C /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 3F94ECD5290061F700B32F4C /* FirebaseFirestore */; };
 		3F94ECD8290061F700B32F4C /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 3F94ECD7290061F700B32F4C /* FirebaseRemoteConfig */; };
 		3F94ECDA290061F700B32F4C /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 3F94ECD9290061F700B32F4C /* FirebaseStorage */; };
+		3F94ECDD2900874100B32F4C /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3F94ECDC2900874100B32F4C /* IQKeyboardManagerSwift */; };
+		3F94ECDF290088C100B32F4C /* SearchResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F94ECDE290088C100B32F4C /* SearchResponseModel.swift */; };
 		3FB979DF28FDE768007246F5 /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB979DE28FDE768007246F5 /* WelcomeViewModel.swift */; };
 		3FB979E228FEA283007246F5 /* AlertPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB979E128FEA283007246F5 /* AlertPresentable.swift */; };
 		3FE2184E28FDDF010082D04A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE2184C28FDDF010082D04A /* WelcomeViewController.swift */; };
@@ -76,6 +78,7 @@
 		3F94ECCC29005ED800B32F4C /* ProfileSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingsViewController.swift; sourceTree = "<group>"; };
 		3F94ECCD29005ED800B32F4C /* ProfileSettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileSettingsViewController.xib; sourceTree = "<group>"; };
 		3F94ECD02900609600B32F4C /* ProfileSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingsViewModel.swift; sourceTree = "<group>"; };
+		3F94ECDE290088C100B32F4C /* SearchResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponseModel.swift; sourceTree = "<group>"; };
 		3FB979DE28FDE768007246F5 /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
 		3FB979E128FEA283007246F5 /* AlertPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresentable.swift; sourceTree = "<group>"; };
 		3FE2184C28FDDF010082D04A /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +104,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F81E9F928FDCE0C00D15D42 /* Kingfisher in Frameworks */,
+				3F94ECDD2900874100B32F4C /* IQKeyboardManagerSwift in Frameworks */,
 				3F81E9E828FDC92100D15D42 /* Moya in Frameworks */,
 				3F81E9F628FDCDE400D15D42 /* SnapKit in Frameworks */,
 				3F94ECD8290061F700B32F4C /* FirebaseRemoteConfig in Frameworks */,
@@ -206,6 +210,7 @@
 		3F30890628FEDFD100E528FE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3F94ECDE290088C100B32F4C /* SearchResponseModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -574,6 +579,7 @@
 				3F94ECD5290061F700B32F4C /* FirebaseFirestore */,
 				3F94ECD7290061F700B32F4C /* FirebaseRemoteConfig */,
 				3F94ECD9290061F700B32F4C /* FirebaseStorage */,
+				3F94ECDC2900874100B32F4C /* IQKeyboardManagerSwift */,
 			);
 			productName = FlickrApi;
 			productReference = 3F33306528FDC0BD0086E62B /* FlickrApi.app */;
@@ -608,6 +614,7 @@
 				3F81E9F428FDCDE400D15D42 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				3F81E9F728FDCE0C00D15D42 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				3F94ECD2290061F700B32F4C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				3F94ECDB2900874000B32F4C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = 3F33306628FDC0BD0086E62B /* Products */;
 			projectDirPath = "";
@@ -655,6 +662,7 @@
 				3F94ECCE29005ED800B32F4C /* ProfileSettingsViewController.swift in Sources */,
 				3F94ECBC290037CA00B32F4C /* SearchResultViewModel.swift in Sources */,
 				3FFDF7AA28FEE0CD0087263A /* SearchViewModel.swift in Sources */,
+				3F94ECDF290088C100B32F4C /* SearchResponseModel.swift in Sources */,
 				3FFDF7BD28FF09470087263A /* RecentTableViewCell.swift in Sources */,
 				3F3088FB28FED6D400E528FE /* MainTabBarController.swift in Sources */,
 				3FFDF7C828FF56470087263A /* ProfileCollectionViewCell.swift in Sources */,
@@ -923,6 +931,14 @@
 				kind = branch;
 			};
 		};
+		3F94ECDB2900874000B32F4C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -960,6 +976,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3F94ECD2290061F700B32F4C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		3F94ECDC2900874100B32F4C /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3F94ECDB2900874000B32F4C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

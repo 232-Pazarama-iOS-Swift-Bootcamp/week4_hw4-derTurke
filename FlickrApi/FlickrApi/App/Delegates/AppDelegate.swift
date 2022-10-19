@@ -10,6 +10,7 @@ import FirebaseCore
 import FirebaseFirestore
 import FirebaseAuth
 import SnapKit
+import IQKeyboardManagerSwift
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -18,9 +19,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         setupFirebase()
+        setupIQKeyboardManager()
         setupWindow()
         
         return true
+    }
+    //IQKeyboardManager setup
+    private func setupIQKeyboardManager() {
+        IQKeyboardManager.shared.enable = true
     }
     
     // Firebase setup
